@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript">
+window.onbeforeunload = function() {
+localStorage.clear()
+}
+function setlc() {
+  localStorage.setItem("he","hu")
+  document.querySelector("h1").innerText = "hu"
+}
+</head>
+<body>
+<button onclick="setlc()">Set</button>
+<h1></h1>
+<script type="text/javascript">
+document.querySelector("h1").innerText = localStorage.getItem("h1")
+</script>
+</body>
+</html>
